@@ -1,0 +1,105 @@
+<section class="page">
+    <h2>Slider</h2>
+
+<h4>Slider 1</h4>
+<!-- <mat-slider>
+</mat-slider> -->
+<div class="code-area">
+    Default slider without any customization.
+    It will cause error, we can't move the pointer
+</div>
+
+
+<h4>Slider 2</h4>
+<mat-slider>
+    <input matSliderThumb>
+</mat-slider>
+<div class="code-area">
+    matThumbSlider as Input
+</div>
+
+
+<h4>Slider 3</h4>
+<mat-slider>
+    <input matSliderThumb [(ngModel)]="slider3">
+</mat-slider>
+<div class="code-area">
+    By default min= 0 and max= 100 <br>
+    Default slider without any customization
+    value : {{slider3}}
+</div>
+
+<h4>Slider 3</h4>
+<mat-slider showTickMarks>
+    <input matSliderThumb>
+</mat-slider>
+<div class="code-area">
+    Tickmark: Stype will be different
+</div>
+
+
+<h4>Slider 3</h4>
+<mat-slider discrete>
+    <input matSliderThumb>
+</mat-slider>
+<div class="code-area">
+    Discrete: adding this attribute will show the current value like tooltip on hovering
+</div>
+
+
+<h4>Slider 3</h4>
+<mat-slider discrete [displayWith]="formatValue" min="0" max="100000">
+    <input matSliderThumb>
+</mat-slider>
+<div class="code-area">
+    [displayWith]= "functionName()"  - this function should return a string
+</div>
+
+
+<h4>Slider 3</h4>
+<mat-slider discrete min="0" max="10000" step="100">
+    <input matSliderThumb>
+</mat-slider>
+<div class="code-area">
+    Step
+</div>
+
+<!-- <mat-slider>
+    <input matSliderStart>
+    <input matSliderEnd>
+  </mat-slider> -->
+
+<h4>Slider 5</h4>
+<mat-slider [min]="200" [max]="500">
+    <input [value]="300" matSliderStartThumb>
+    <input [value]="400" matSliderEndThumb>
+</mat-slider>
+<div class="code-area">
+    Slider for range
+    using [value] attribute ( start, end = 300, 400 )
+</div>
+
+<h4>Slider 6</h4>
+<mat-slider [min]="200" [max]="500">
+    <input matSliderStartThumb [(ngModel)]="slide6_1">
+    <input matSliderEndThumb [(ngModel)]="slide6_2">
+</mat-slider>
+<div class="code-area">
+    min : {{slide6_1}} <br>
+    max : {{slide6_2}}
+</div>
+
+
+<h4>Slider 7</h4>
+
+<mat-slider min="0" max="2000" showTickMarks discrete (click)="getLimit($event)">  
+    <input matSliderStartThumb [(value)]="sliderStart">
+    <input matSliderEndThumb [(value)]="sliderEnd">
+</mat-slider>
+<div class="code-area">
+    See console for value
+</div>
+
+
+
+</section>

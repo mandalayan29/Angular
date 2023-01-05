@@ -1,0 +1,94 @@
+<!-- 
+
+If the code dont work: 
+    
+    1. SASS
+        @import https://fonts.googleapis.com/icon?family=Material+Icons
+        @import ~@angular/material/prebuilt-themes/indigo-pink.css
+    2. CSS
+        @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+        @import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+    3. import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+    -- After verifying installation
+    -- mat-nav-list import MatListModule
+
+ -->
+
+<!-- <mat-toolbar color="primary">
+    <button>
+        <mat-icon>menu</mat-icon>
+    </button>
+</mat-toolbar> -->
+
+<mat-sidenav-container fullScreen>
+
+    <mat-sidenav #sideNav>
+
+        <mat-nav-list (click)="sideNav.close()">
+            <a mat-list-item routerLink="slider">
+                <mat-icon>home</mat-icon>
+                Slider
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/dropdown">
+                <mat-icon>home</mat-icon>
+                Dropdown
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/stepper">
+                <mat-icon>home</mat-icon>
+                Stepper
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="">
+                <mat-icon>home</mat-icon>
+                My Space
+            </a>
+        </mat-nav-list>
+        <mat-nav-list>
+            <a mat-list-item href="">
+                <mat-icon>home</mat-icon>
+                Contact
+            </a>
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+
+
+
+    <!-- mat-toolbar : Top header -->
+    <mat-toolbar color="primary" role="heading">
+        <!-- mat-icon-button is the best suit for toolbar item -->
+        <button mat-icon-button (click)="sideNav.open()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="toolbar-spacer"></span>
+        <a mat-button>
+            Home
+        </a>
+        <a mat-button>
+            Login
+        </a>
+
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+</mat-sidenav-container>
+
+
+
+
+<!-- 
+    For multiple line of toolbar
+    <mat-toolbar-row>
+        <span>Second Line</span>
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+ -->
+

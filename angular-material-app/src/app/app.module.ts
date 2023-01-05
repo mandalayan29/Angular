@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SliderComponent } from './landing-page/slider/slider.component';
-import { ButtonComponent } from './landing-page/button/button.component';
-import { TabGroupComponent } from './landing-page/tab-group/tab-group.component';
-import { StepperComponent } from './landing-page/stepper/stepper.component';
-import { FormComponent } from './landing-page/form/form.component';
+import { LandingPageComponent } from './body/body.component';
+import { SliderComponent } from './body/slider/slider.component';
+import { ButtonComponent } from './body/button/button.component';
+import { TabGroupComponent } from './body/tab-group/tab-group.component';
+import { StepperComponent } from './body/stepper/stepper.component';
+import { FormComponent } from './body/form/form.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';

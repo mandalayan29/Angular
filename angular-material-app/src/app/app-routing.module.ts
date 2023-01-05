@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { SliderComponent } from './landing-page/slider/slider.component';
-import { StepperComponent } from './landing-page/stepper/stepper.component';
+import { LandingPageComponent } from './body/body.component';
+import { SliderComponent } from './body/slider/slider.component';
+import { StepperComponent } from './body/stepper/stepper.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.sass']
+  templateUrl: './body.component.html',
+  styleUrls: ['./body.component.sass']
 })
 export class LandingPageComponent {
 

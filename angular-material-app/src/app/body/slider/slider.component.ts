@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 
 export class SliderComponent {
 
+
+
+
+
   slider3: number =10;
 
   slide6_1: number= 0;

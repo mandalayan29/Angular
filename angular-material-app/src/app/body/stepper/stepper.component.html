@@ -1,1 +1,211 @@
-<p>stepper works!</p>
+<!-- 
+    Structure
+     <mat-stepper>
+    <mat-step [stepControl]="formGroupName">
+        stepcontrol : validate the step/ if the step is a form then it validates the form
+        <ng-template matStepLabel>First</ng-template>
+        .......
+    </mat-step>
+    <mat-step>.......</mat-step>
+    <mat-step>.......</mat-step>
+    <mat-step>.......</mat-step>
+ </mat-stepper>
+ -->
+
+
+<div class="page">
+
+    <h2>Stepper</h2>
+
+    <mat-stepper orientation="horizontal" [linear]="true">
+
+        <!-- First Step -->
+        <mat-step [stepControl]="form1" errorMessage="Please fill the form">
+            <!-- Without step control [linear] wont work -->
+            <ng-template matStepLabel>Step 1</ng-template>
+            <br>
+            <form [formGroup]="form1">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+                <br>
+                <mat-radio-group>
+                    <mat-label>Gender : </mat-label>
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="other">Other</mat-radio-button>
+                </mat-radio-group>
+                <br>
+                <!--
+                Material Input with prefix and suffix 
+                <mat-form-field>
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="00000 00000">
+                <span matPrefix>
+                    <mat-icon>home</mat-icon>
+                </span>
+                <span matSuffix>
+                    .00
+                </span>
+            </mat-form-field> -->
+            </form>
+
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step label="Step 3">
+            Second Step: <br>
+            This is a linear Stepper : [liner]="true"<br>
+            Note: Need to fix the error message issue
+
+            <br>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 4</ng-template>
+            Last Step
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext color="">Submit</button>
+        </mat-step>
+
+    </mat-stepper>
+
+    <br><hr><br>
+
+    <h2>Vertical Stepper</h2>
+
+    <mat-stepper orientation="vertical" [linear]="false">
+
+        <!-- First Step -->
+        <mat-step [stepControl]="form1">
+            <!-- Without step control [linear] wont work -->
+            <ng-template matStepLabel>Step 1</ng-template>
+            <br>
+            <form [formGroup]="form1">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+                <br>
+                <mat-radio-group>
+                    <mat-label>Gender : </mat-label>
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="other">Other</mat-radio-button>
+                </mat-radio-group>
+
+            </form>
+
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step label="Step 3">
+            Second Step
+            <br>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 4</ng-template>
+            Last Step
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext color="">Submit</button>
+        </mat-step>
+
+    </mat-stepper>
+
+    <br><hr><br>
+    <h2>Stepper</h2>
+    <mat-stepper orientation="horizontal" [linear]="false" labelPosition="bottom" headerPosition="bottom">
+
+        <mat-step [stepControl]="form1" label="Step1">
+            Two types of Header positions are there Bottom and Top
+            <br>
+            By Default : top
+            <br>
+
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step label="Step 3">
+            Second Step
+            <br>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 4</ng-template>
+            Last Step
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext color="">Submit</button>
+        </mat-step>
+
+    </mat-stepper>
+
+    <br><hr><br>
+    <h2>Stepper</h2>
+    <mat-stepper orientation="horizontal" [linear]="false" labelPosition="bottom" animationDuration="3000">
+
+        <!-- First Step -->
+        <ng-template matStepperIcon="edit">
+            <mat-icon>bubble_chart</mat-icon>
+        </ng-template>
+        <mat-step [stepControl]="form1" label="Step1">
+            Two types of label positions are there Bottom and End
+            <br>
+            By Default : End
+            <br>
+            animationDuration="3000" : Sliding animation will take 3sec
+            <br>
+            <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </mat-step>
+
+        <ng-template matStepperIcon="phone">
+            <mat-icon>phone</mat-icon>
+        </ng-template>
+        <mat-step label="Step 3">
+            To override default step icon <br>
+            import
+            <pre>{{ '{' }}</pre> STEPPER_GLOBAL_OPTIONS
+            <pre>{{ '}' }}</pre> from '@angular/cdk/stepper';<br>
+            selector: 'app-stepper',
+            templateUrl: './stepper.component.html',
+            styleUrls: ['./stepper.component.sass'],
+            providers: [
+            <pre>{{ '{' }}</pre>
+
+
+            provide: STEPPER_GLOBAL_OPTIONS, useValue:
+            <pre>{{ '{' }}</pre> displayDefaultIndicatorType: false
+            <pre>{{ '}' }}</pre> ]
+
+            <br>
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext>Next</button>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Step 4</ng-template>
+            Last Step
+            <button mat-raised-button matStepperPrevious>Back</button>
+            <button mat-raised-button matStepperNext color="">Submit</button>
+        </mat-step>
+
+
+    </mat-stepper>
+</div>

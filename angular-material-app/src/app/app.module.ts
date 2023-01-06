@@ -18,8 +18,11 @@ import { MatButtonModule } from'@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import { MatSliderModule } from '@angular/material/slider'
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
 
 
 
@@ -49,7 +53,11 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatSliderModule
+    MatSliderModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
 
   ],
   providers: [],

@@ -22,7 +22,7 @@ If the code dont work:
 
 <mat-sidenav-container fullScreen>
 
-    <mat-sidenav #sideNav>
+    <mat-sidenav #sideNav >
 
         <mat-nav-list (click)="sideNav.close()">
             <a mat-list-item routerLink="slider">
@@ -30,25 +30,25 @@ If the code dont work:
                 Slider
             </a>
         </mat-nav-list>
-        <mat-nav-list>
+        <mat-nav-list (click)="sideNav.close()">
             <a mat-list-item routerLink="/dropdown">
                 <mat-icon>home</mat-icon>
                 Dropdown
             </a>
         </mat-nav-list>
-        <mat-nav-list>
+        <mat-nav-list (click)="sideNav.close()">
             <a mat-list-item routerLink="/stepper">
                 <mat-icon>home</mat-icon>
                 Stepper
             </a>
         </mat-nav-list>
-        <mat-nav-list>
+        <mat-nav-list (click)="sideNav.close()">
             <a mat-list-item href="">
                 <mat-icon>home</mat-icon>
                 My Space
             </a>
         </mat-nav-list>
-        <mat-nav-list>
+        <mat-nav-list (click)="sideNav.close()">
             <a mat-list-item href="">
                 <mat-icon>home</mat-icon>
                 Contact

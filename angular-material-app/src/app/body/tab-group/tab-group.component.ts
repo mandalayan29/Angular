@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class TabGroupComponent {
 
+  links: string[]=['First', 'Second', 'Third']
+
+
+  activeLink=this.links[0];
+
+
+
 }

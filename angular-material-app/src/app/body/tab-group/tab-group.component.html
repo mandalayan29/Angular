@@ -1,1 +1,58 @@
-<p>tab-group works!</p>
+<div class="page">
+
+    <h2>Tab</h2>
+
+    <div style="min-height: 300px;">
+    <h4>Material Tab</h4>
+    <mat-tab-group >
+
+        <mat-tab label="First">
+            content
+        </mat-tab>
+            
+
+        <mat-tab>
+            <ng-template matTabLabel>
+                Second
+            </ng-template>
+                By default all tabs are streached
+
+                <br>
+                To disable this : 
+                mat-stretch-tabs="false" <br>
+                And tab position can be fixed by : 
+                mat-align-tabs="start"/"center"/"end"
+            
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template matTabLabel>
+                <mat-icon>home</mat-icon> Third
+            </ng-template>
+            Material tab label with icon
+        </mat-tab>
+
+    </mat-tab-group>
+    </div>
+    <br><hr><br>
+    <div>
+
+        <h4>Tab nav bar for navigation between routes</h4>
+
+        <nav mat-tab-nav-bar [tabPanel]="tabPanelId">
+            <a mat-tab-link *ngFor="let link of links"
+                (click)="activeLink=link" 
+                [active]="activeLink== link"
+                >
+                {{link}}
+            </a>
+        </nav>
+        <mat-tab-nav-panel #tabPanelId></mat-tab-nav-panel>
+
+
+
+    </div>
+
+
+
+</div>

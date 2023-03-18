@@ -23,6 +23,14 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSnackBarModule, MatSnackBarRef } from '@angular/material/snack-bar';
+
+import { SnackBarComponent } from './body/snack-bar/snack-bar.component';
+import { SnackBarDesign1Component } from './body/snack-bar/snack-bar-design1/snack-bar-design1.component';
+import { SnackBarDesign2Component } from './body/snack-bar/snack-bar-design2/snack-bar-design2.component';
+import { SnackBarDesign3Component } from './body/snack-bar/snack-bar-design3/snack-bar-design3.component';
+import { SnackBarDesign4Component } from './body/snack-bar/snack-bar-design4/snack-bar-design4.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +41,12 @@ import { MatRadioModule } from '@angular/material/radio';
     ButtonComponent,
     TabGroupComponent,
     StepperComponent,
-    FormComponent
+    FormComponent,
+    SnackBarComponent,
+    SnackBarDesign1Component,
+    SnackBarDesign2Component,
+    SnackBarDesign3Component,
+    SnackBarDesign4Component
   ],
   imports: [
     BrowserAnimationsModule,
@@ -58,9 +71,13 @@ import { MatRadioModule } from '@angular/material/radio';
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
+    MatTabsModule,
+    MatSnackBarModule
 
   ],
-  providers: [],
+  providers: [
+    { provide: MatSnackBarRef, useValue: {} },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

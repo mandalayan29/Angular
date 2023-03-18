@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"/>
+<div class="snack-bar">
+    <div class="content">
+        <div class="sign">
+            <div class="line"></div>
+            <div class="icon">
+                <mat-icon *ngIf="types[0]" fontSet="material-icons-outlined">dangerous</mat-icon>
+                <mat-icon *ngIf="types[1]" fontSet="material-icons-outlined">error_outline</mat-icon>
+                <mat-icon *ngIf="types[2]" fontSet="material-icons-outlined">check</mat-icon>
+                <mat-icon *ngIf="types[3]" fontSet="material-icons-outlined">info</mat-icon>
+            </div>
+        </div>
+        <div class="text-content">
+            <div class="title">Errror occured</div>
+            <div class="text">This is the text for the error </div>
+        </div>
+    </div>
+    <button (click)="close()">x</button>
+</div>
